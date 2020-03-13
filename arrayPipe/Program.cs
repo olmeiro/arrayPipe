@@ -38,7 +38,7 @@ namespace arrayPipe
 
             for (var index = listaPersonas.Count - 1; index >= 0; index--)
             {
-                if (listaPersonas[index].nombre == nombreDel)
+                if (listaPersonas[index].nombre.Equals(nombreDel))
                 {
                     listaPersonas.RemoveAt(index);
                 }
