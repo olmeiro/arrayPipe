@@ -15,7 +15,7 @@ namespace arrayPipe
             List<Persona> listaPersonas = new List<Persona>();
             Console.WriteLine("capacidad: " + listaPersonas.Capacity);
 
-            Persona miPersona = new Persona();
+            //Persona miPersona = new Persona();
             //ArrayList listaPersonas = new ArrayList();
 
             //Agregar persona a la list:
@@ -68,7 +68,28 @@ namespace arrayPipe
             foreach (Persona per in listaPersonas)
             {
                 Console.WriteLine(per.nombre + " " + per.edad);
-                
+            }
+
+            //Modificar persona en la lista: Si busco la persona por nombre no puedo modificar su nombre!!!
+
+            Console.WriteLine("modificar persona: ");
+
+            Console.WriteLine("Ingrese nombre de la persona a modificar");
+            string modPersona = Console.ReadLine();
+
+            foreach (var item in listaPersonas)
+            {
+                if (item.nombre.Equals(modPersona))
+                {
+                    Console.WriteLine("ingrese nueva edad");
+                    int nuevaEdad = int.Parse(Console.ReadLine());
+                    item.edad = nuevaEdad;
+                }
+            }
+
+            foreach (Persona per in listaPersonas)
+            {
+                Console.WriteLine(per.nombre + " " + per.edad);
             }
 
             //Eliminar persona:
